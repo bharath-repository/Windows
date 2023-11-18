@@ -1,6 +1,6 @@
 1] In General Info
 
-
+doskey /history                                                    ------------- To see cmd history
 
 2] Network related
 
@@ -15,4 +15,4 @@ netsh lan show interfaces
 ipconfig
 arp -a
 
-doskey /history                                                    ------------- To see cmd history
+
