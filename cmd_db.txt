@@ -1,13 +1,18 @@
+1] In General Info
 
-netsh wlan show profile name="Knight" key=clear
+
+
+2] Network related
+
+netsh wlan show profile name="Knight" key=clear                    ------------- To get wifi network password
 getmac
 
-netsh wlan show interfaces
-ipconfig
-arp -a
+netsh wlan show interfaces                                         ------------- To get wifi network work adapter details
+ipconfig                                                           ------------- To find the default G/W ip address
+arp -a                                                             ------------- To get default G/W MAC address
 
 netsh lan show interfaces
 ipconfig
 arp -a
 
-doskey /history
+doskey /history                                                    ------------- To see cmd history
