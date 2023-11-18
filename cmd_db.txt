@@ -2,9 +2,13 @@
 
 doskey /history                                                    ------------- To see cmd history
 systeminfo                                                         ------------- To see system info
+msinfo32
 net user                                                           ------------- To User info
 ver                                                                ------------- To see the version
 date
+date /t                                                            ------------- To Only print date
+time
+time /t
 hostname
 whoami /all
 shutdown /s                                                        ------------- To shutdown
@@ -21,10 +25,12 @@ tree
 type
 copy
 del
+where /r C:\ sample_file.txt                                        ----------- To find a file inside the C drive
 help
 echo
 cls                                                                 ----------- To clear the cmd 
 systeminfo | clip                                                   ----------- To copy the command output the clipboard later will paste it in a file
+clip < <filename>                                                   ----------- To a file in a clipboard
 wmic product get name                                               ----------- To get install program list
 
 
@@ -55,6 +61,7 @@ tracert                                                             ------------
 tracert -d x.x.x.x                                                   ----------- Not to resolve for names for the IP
 
 nslookup                                                            ------------ To see dns records
+tzutils /g                                                          ------------ To Get info about Timezone
 
 3] Services related
 
