@@ -4,6 +4,9 @@ doskey /history                                                    -------------
 
 2] Network related
 
+ipconfig
+ipconfig /all
+
 netsh wlan show profile name="Knight" key=clear                    ------------- To get wifi network password
 getmac
 
