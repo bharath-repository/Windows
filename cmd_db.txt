@@ -18,4 +18,6 @@ netsh lan show interfaces
 ipconfig
 arp -a
 
+netstat -an                                                        ------------- To find out open port of our PC
+
 
