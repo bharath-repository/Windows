@@ -1,22 +1,36 @@
 1] In General Info
 
 doskey /history                                                    ------------- To see cmd history
-systeminfo
+systeminfo                                                         ------------- To see system info
+net user                                                           ------------- To User info
+ver                                                                ------------- To see the version
+hostname
+whoami /all
 shutdown /s                                                        ------------- To shutdown
 shutdown /r                                                        ------------- To Restart
 shutdown /a                                                         ------------ To Cancel shutdown command
-
+logoff
 Tasklist
 Taskkill
-
+dir
+rmdir c:\knight\it\test /s                                         -------------- This /s option is for to delete the directory with files
+cd
+copy
+del
+help
 cls                                                                 ----------- To clear the cmd 
+systeminfo | clip                                                   ----------- To copy the command output the clipboard later will paste it in a file
 
 
 2] Network related
 
 ipconfig
 ipconfig /all
-
+ipconfig /renew
+ipconfig /release
+ncpa.cpl                                                           ------------- To the Network adpater settings
+route print                                                        ------------- To see Routing Table
+netsh wlan show profiles
 netsh wlan show profile name="Knight" key=clear                    ------------- To get wifi network password
 getmac
 
@@ -30,4 +44,11 @@ arp -a
 
 netstat -an                                                        ------------- To find out open port of our PC
 tracert                                                             ------------ To trace network route
+tracert -d x.x.x.x                                                   ----------- Not to resolve for names for the IP
 
+nslookup                                                            ------------ To see dns records
+
+3] Services related
+
+net stop <service name>
+net stop <service name>
