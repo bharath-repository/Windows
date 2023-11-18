@@ -1,6 +1,16 @@
 1] In General Info
 
 doskey /history                                                    ------------- To see cmd history
+systeminfo
+shutdown /s                                                        ------------- To shutdown
+shutdown /r                                                        ------------- To Restart
+shutdown /a                                                         ------------ To Cancel shutdown command
+
+Tasklist
+Taskkill
+
+cls                                                                 ----------- To clear the cmd 
+
 
 2] Network related
 
@@ -19,5 +29,5 @@ ipconfig
 arp -a
 
 netstat -an                                                        ------------- To find out open port of our PC
-
+tracert                                                             ------------ To trace network route
 
