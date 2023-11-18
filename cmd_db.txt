@@ -1,1 +1,13 @@
 
+netsh wlan show profile name="Knight" key=clear
+getmac
+
+netsh wlan show interfaces
+ipconfig
+arp -a
+
+netsh lan show interfaces
+ipconfig
+arp -a
+
+doskey /history
