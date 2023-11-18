@@ -15,11 +15,13 @@ Taskkill
 dir
 rmdir c:\knight\it\test /s                                         -------------- This /s option is for to delete the directory with files
 cd
+tree
 copy
 del
 help
 cls                                                                 ----------- To clear the cmd 
 systeminfo | clip                                                   ----------- To copy the command output the clipboard later will paste it in a file
+wmic product get name                                               ----------- To get install program list
 
 
 2] Network related
