@@ -65,7 +65,7 @@ tracert                                                             ------------
 tracert -d x.x.x.x                                                   ----------- Not to resolve for names for the IP
 
 nslookup                                                            ------------ To see dns records
-tzutils /g                                                          ------------ To Get info about Timezone
+tzutil /g                                                          ------------ To Get info about Timezone
 
 3] Services related
 
