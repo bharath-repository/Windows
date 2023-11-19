@@ -21,6 +21,10 @@ dir
 mkdri
 rmdir c:\knight\it\test /s                                         -------------- This /s option is for to delete the directory with files
 cd
+findstr 
+findstr /I                                                         ------------- Case insensitive
+findstr test example.txt
+ipconfig /all | findstr /I gateway
 tree
 type
 copy
