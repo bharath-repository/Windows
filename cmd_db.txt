@@ -40,6 +40,8 @@ wmic product get name                                               ----------- 
 
 2] Network related
 
+Private MAC address second letter (2,6,a,e)
+
 ping
 pathping
 ipconfig
