@@ -7,6 +7,21 @@ whoami
 date
 
 
+------------------------------------------------------------------------------------------------------
+To see current folder and recursive folder size in sorting format
+------------------------------------------------------------------------------------------------------
+Get-ChildItem -Recurse -Depth 1 | 
+    Where-Object { $_.PSIsContainer } | 
+    ForEach-Object { 
+        $_ | 
+        Select-Object @{Name="Size"; Expression={(Get-ChildItem -Recurse -Force $_.FullName | Measure-Object -Property Length -Sum).Sum}}, 
+                      Name, 
+                      FullName 
+    } | 
+    Sort-Object Size -Descending | 
+    Format-Table @{Name="Size(GB)"; Expression={"{0:N2}" -f ($_.Size/1GB)}}, FullName
+--------------------------------------------------------------------------------------------------------
+
 ls
 dir
 cd
