@@ -9,6 +9,7 @@ date
 
 ------------------------------------------------------------------------------------------------------
 To see current folder and recursive folder size in sorting format
+sudo du -h -d 1 | sort -hr ------------- equivalent to this linux command
 ------------------------------------------------------------------------------------------------------
 Get-ChildItem -Recurse -Depth 1 | 
     Where-Object { $_.PSIsContainer } | 
