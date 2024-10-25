@@ -97,10 +97,8 @@ netsh interface ipv4 set dns name="Ethernet" static 8.8.8.8
 netsh interface ip add dns name=”Ethernet” 1.1.1.1
 
 To get ip address through dhcp to an interface 
-
 netsh interface ipv4 set address name="Wi-Fi 2" source=dhcp
 netsh interface ipv4 set dnsservers name="Wi-Fi 2" source=dhcp
-
 netsh interface ipv4 set address name="Ethernet" source=dhcp
 netsh interface ipv4 set dnsservers name="Ethernet" source=dhcp
 
