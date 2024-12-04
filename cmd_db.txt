@@ -93,16 +93,23 @@ netsh interface ipv4 set address name="Wi-Fi 2" static 192.168.0.222 255.255.255
 To setup static dns ip / secondary dns ip address to an interface 
 netsh interface ipv4 set dns name="Wi-Fi 2" static 8.8.8.8
 
-netsh interface ipv4 set dns name="Ethernet" static 8.8.8.8
-netsh interface ip add dns name=”Ethernet” 1.1.1.1
+netsh interface ipv4 set address name="Ethernet" static 192.168.0.10 255.255.255.0 192.168.0.1 && netsh interface ipv4 set dns name="Ethernet" static 8.8.8.8 && netsh interface ip add dns name=”Ethernet” 1.1.1.1
 
-To get ip address through dhcp to an interface 
-netsh interface ipv4 set address name="Wi-Fi 2" source=dhcp
-netsh interface ipv4 set dnsservers name="Wi-Fi 2" source=dhcp
-netsh interface ipv4 set address name="Ethernet" source=dhcp
-netsh interface ipv4 set dnsservers name="Ethernet" source=dhcp
+To get ip address through dhcp to an interface
+
+netsh interface ipv4 set address name="Wi-Fi 2" source=dhcp && netsh interface ipv4 set dnsservers name="Wi-Fi 2" source=dhcp
+netsh interface ipv4 set address name="Ethernet" source=dhcp && netsh interface ipv4 set dnsservers name="Ethernet" source=dhcp
 
 
+To setup static route
+ipconfig
+route print
+
+route add <destination subnet> mask <subnet mask> <gateway> metric <metric> if <interface index>
+route -p add <destination subnet> mask <subnet mask> <gateway> metric <metric> if <interface index>
+
+route add 192.168.1.0 mask 255.255.255.0 192.168.1.1 metric 1 if 10
+route add 10.0.0.0 mask 255.255.255.0 10.0.0.1 metric 1 if 5
 
 
 3] Services related
