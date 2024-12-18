@@ -111,6 +111,11 @@ route add 192.168.1.0 mask 255.255.255.0 192.168.1.1 metric 1 if 10
 route add 10.0.0.0 mask 255.255.255.0 10.0.0.1 metric 1 if 5
 
 
+To check IP maximum packet size = from that we can conclude maximum L2 Frame size 
+ping -f -l 1472 8.8.8.8         *****To test MTU size. -f (Don't Fragment) -l (Packet Size)*******max frame size (MTU + Ethernet Header (14 bytes) + Trailer (4 bytes) = 1500 + 14 + 4 = 1518 bytes.)
+max ip packet size (Example: If 1472 works but 1473 fails, the MTU is 1472 payload + 28 ip header = 1500 max MTU)
+
+
 3] Services related
 
 net stop <service name>
