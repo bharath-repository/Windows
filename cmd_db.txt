@@ -36,6 +36,7 @@ cls                                                                 ----------- 
 systeminfo | clip                                                   ----------- To copy the command output the clipboard later will paste it in a file
 clip < <filename>                                                   ----------- To a file in a clipboard
 wmic product get name                                               ----------- To get install program list
+perfmon /res                                                        ----------- To see resource monitor and more info 
 
 
 
