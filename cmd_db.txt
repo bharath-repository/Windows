@@ -53,11 +53,13 @@ ipconfig /renew
 ipconfig /release
 ncpa.cpl                                                           ------------- To the Network adpater settings
 route print                                                        ------------- To see Routing Table
+route print  -4                                                    ------------- To see IPv4 Route only
 netsh wlan show profiles
 netsh wlan show profile name="Knight" key=clear                    ------------- To get wifi network password
 getmac
 
 netsh wlan show interfaces                                         ------------- To get wifi network work adapter details
+netsh wlan show interfaces "Ethernet|Wi-Fi 2|Ethernet 9"
 ipconfig                                                           ------------- To find the default G/W ip address
 arp -a                                                             ------------- To get default G/W MAC address
 
@@ -110,11 +112,32 @@ route -p add <destination subnet> mask <subnet mask> <gateway> metric <metric> i
 Example
 route add 192.168.1.0 mask 255.255.255.0 192.168.1.1 metric 1 if 10
 route add 10.0.0.0 mask 255.255.255.0 10.0.0.1 metric 1 if 5
+route delete 192.168.1.0 mask 255.255.255.0 192.168.1.254 metric 35 if 13
 
 
 To check IP maximum packet size = from that we can conclude maximum L2 Frame size 
 ping -f -l 1472 8.8.8.8         *****To test MTU size. -f (Don't Fragment) -l (Packet Size)*******max frame size (MTU + Ethernet Header (14 bytes) + Trailer (4 bytes) = 1500 + 14 + 4 = 1518 bytes.)
 max ip packet size (Example: If 1472 works but 1473 fails, the MTU is 1472 payload + 28 ip header = 1500 max MTU)
+
+To do routing in windows computer
+To enable IP forwarding in windows
+netsh interface ipv4 set interface "Wi-Fi 2" forwarding=enabled store=persistent
+netsh interface ipv4 set interface "Ethernet" forwarding=enabled store=persistent
+netsh interface ipv4 set interface "Ethernet 9" forwarding=enabled store=persistent
+
+To ping from different source interface and IP address
+ping -S <source address> <destination address>
+ping -S 192.168.10.10 192.168.1.1
+
+To list the available server 
+speedtest.exe -L
+
+speedtest.exe -s 44817            ----------------------sptel
+speedtest.exe -s 62216            ----------------------CTC (Singapore)
+
+
+
+
 
 
 3] Services related
