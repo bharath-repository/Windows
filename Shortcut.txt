@@ -1,0 +1,2 @@
+win + alt + R ---------------------Screen recording
+win + ctrl + shift + B ------------Refersh Graphis card
