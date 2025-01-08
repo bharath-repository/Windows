@@ -76,6 +76,7 @@ tzutil /g                                                          ------------ 
 
 To see routing table
 route print
+route -f                                                            --------- To flush routing table from windows
 
 To see available interface
 netsh interface show interface
