@@ -26,6 +26,6 @@ Get-ChildItem -Recurse -Depth 1 |
 ls
 dir
 cd
-
+cd C:\                      >>> to go to c drive 
 cls 
 history
